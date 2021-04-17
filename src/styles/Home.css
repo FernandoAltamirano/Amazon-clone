@@ -15,3 +15,11 @@
   z-index: -1;
   margin-bottom: -150px;
 }
+@media (max-width: 768px) {
+  .home .home__row {
+    display: block;
+  }
+  .home__image {
+    margin-bottom: -20px;
+  }
+}

@@ -19,12 +19,12 @@ const reducer = (state, action) => {
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.payload.id
       );
-      // if (index >= 0) {
-      //item exists in basket, remove it...
-      newBasket.splice(index, 1);
-      // } else {
-      // console.warn(`Can't remove product (id: ${action.payload.id})`);
-      // }
+      if (index >= 0) {
+        //item exists in basket, remove it...
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(`Can't remove product (id: ${action.payload.id})`);
+      }
       // return state;
       return { ...state, basket: newBasket };
     default:
